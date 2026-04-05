@@ -211,7 +211,7 @@ body.scrolled .back-to-top{opacity:1;pointer-events:auto;transform:translateY(0)
 .equipment-item{background:var(--bg-card);border:1px solid var(--bg-card-border);border-radius:var(--radius-lg);padding:2rem 1.5rem;text-align:center;transition:transform var(--transition),border-color var(--transition),box-shadow var(--transition)}
 .equipment-item:hover,.equipment-item:focus-visible{transform:translateY(-5px) scale(1.02);border-color:var(--teal);box-shadow:0 14px 40px rgba(0,0,0,0.25)}
 .equip-icon{width:48px;height:48px;margin:0 auto 1rem;color:var(--teal);transition:transform var(--transition)}
-.equip-icon .icon-svg{width:48px;height:48px}
+.equip-icon .icon-svg{width:70px;height:70px}
 .equipment-item:hover .equip-icon{transform:scale(1.15) rotate(-5deg)}
 .equipment-item h3{font-family:'Barlow Condensed',sans-serif;font-size:1.1rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:var(--teal);margin-bottom:0.5rem}
 .equipment-item p{font-size:0.9rem;color:var(--text-secondary);line-height:1.65}
