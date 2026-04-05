@@ -40,7 +40,10 @@ a:focus-visible,[tabindex="0"]:focus-visible{outline:2px solid var(--teal);outli
 .site-header{position:fixed;top:0;left:0;right:0;z-index:100;background:var(--nav-bg);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid rgba(26,200,200,0.15)}
 .header-inner{display:flex;align-items:center;justify-content:space-between;max-width:1160px;margin:0 auto;padding:0.25rem 24px;gap:1rem}
 .logo{display:flex;align-items:center;text-decoration:none}
-.logo-img{height:96px;width:auto;transition:transform var(--transition);filter:drop-shadow(0 0 12px rgba(26,200,200,0.45))}
+.logo-img{height:120px;width:auto;transition:transform var(--transition);filter:drop-shadow(0 0 14px rgba(26,200,200,0.5))}
+.hero-crest{position:absolute;right:min(8vw,120px);top:50%;transform:translateY(-50%);z-index:4;pointer-events:none;animation:heroFadeIn 1.4s ease both}
+.hero-crest img{width:clamp(160px,22vw,280px);height:auto;filter:drop-shadow(0 8px 32px rgba(0,0,0,0.6)) drop-shadow(0 0 24px rgba(26,200,200,0.25))}
+@media(max-width:860px){.hero-crest{display:none}}
 .logo:hover .logo-img{transform:scale(1.06) rotate(-3deg)}
 .main-nav ul{display:flex;list-style:none;gap:0.15rem}
 .nav-link{display:block;padding:0.4rem 0.65rem;font-size:0.78rem;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:var(--text-secondary);border-radius:6px;position:relative;transition:color var(--transition)}
