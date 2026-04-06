@@ -299,13 +299,13 @@ body.scrolled .back-to-top{opacity:1;pointer-events:auto;transform:translateY(0)
 }
 
 /* ── PNG EQUIPMENT ICONS ── */
-.equip-icon-img{width:64px;height:64px;object-fit:contain;display:block;margin:0 auto}
-.equip-icon{width:64px;height:64px;margin:0 auto 1rem;transition:transform var(--transition)}
+.equip-icon-img{width:192px;height:192px;object-fit:contain;display:block;margin:0 auto}
+.equip-icon{width:192px;height:192px;margin:0 auto 1rem;transition:transform var(--transition)}
 .equipment-item:hover .equip-icon{transform:scale(1.12) rotate(-4deg)}
 
 /* Bring icon on join page — larger, no hover rotate */
-.bring-icon{width:56px;height:56px;margin-bottom:0.75rem}
-.bring-icon .equip-icon-img{width:56px;height:56px}
+.bring-icon{width:192px;height:192px;margin-bottom:0.75rem}
+.bring-icon .equip-icon-img{width:192px;height:192px}
 
 /* ── EQUIPMENT CARD CONTRAST FIX ── */
 /* Ensure card title and body text are clearly legible over the dark card bg */
