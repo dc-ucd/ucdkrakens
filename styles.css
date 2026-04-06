@@ -211,9 +211,9 @@ body.scrolled .back-to-top{opacity:1;pointer-events:auto;transform:translateY(0)
 .equipment-item{background:var(--bg-card);border:1px solid var(--bg-card-border);border-radius:var(--radius-lg);padding:2rem 1.5rem;text-align:center;transition:transform var(--transition),border-color var(--transition),box-shadow var(--transition)}
 .equipment-item:hover,.equipment-item:focus-visible{transform:translateY(-5px) scale(1.02);border-color:var(--teal);box-shadow:0 14px 40px rgba(0,0,0,0.25)}
 .equip-icon{width:48px;height:48px;margin:0 auto 1rem;color:var(--teal);transition:transform var(--transition)}
-.equip-icon svg{width:75px;height:75px}
+.equip-icon .icon-svg{width:48px;height:48px}
 .equipment-item:hover .equip-icon{transform:scale(1.15) rotate(-5deg)}
-.equipment-item h3{font-family:'Barlow Condensed',sans-serif;font-size:1.1rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:#0B1F3A;margin-bottom:0.5rem}
+.equipment-item h3{font-family:'Barlow Condensed',sans-serif;font-size:1.1rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:var(--teal);margin-bottom:0.5rem}
 .equipment-item p{font-size:0.9rem;color:var(--text-secondary);line-height:1.65}
 
 /* History */
@@ -296,4 +296,54 @@ body.scrolled .back-to-top{opacity:1;pointer-events:auto;transform:translateY(0)
 @media(prefers-reduced-motion:reduce){
   *,*::before,*::after{animation-duration:0.01ms!important;animation-iteration-count:1!important;transition-duration:0.01ms!important}
   html{scroll-behavior:auto}
+}
+
+/* ── PNG EQUIPMENT ICONS ── */
+.equip-icon-img{width:64px;height:64px;object-fit:contain;display:block;margin:0 auto}
+.equip-icon{width:64px;height:64px;margin:0 auto 1rem;transition:transform var(--transition)}
+.equipment-item:hover .equip-icon{transform:scale(1.12) rotate(-4deg)}
+
+/* Bring icon on join page — larger, no hover rotate */
+.bring-icon{width:56px;height:56px;margin-bottom:0.75rem}
+.bring-icon .equip-icon-img{width:56px;height:56px}
+
+/* ── EQUIPMENT CARD CONTRAST FIX ── */
+/* Ensure card title and body text are clearly legible over the dark card bg */
+.equipment-item{
+  background:var(--bg-card);
+  border:1px solid var(--bg-card-border);
+}
+.equipment-item h3{
+  color:var(--teal);
+  font-size:1rem;
+  margin-bottom:0.4rem;
+}
+.equipment-item p{
+  color:var(--text-secondary);
+  font-size:0.88rem;
+  line-height:1.6;
+}
+/* Boost text contrast in light mode */
+@media(prefers-color-scheme:light){
+  .equipment-item{background:#fff;border-color:#9fd0df}
+  .equipment-item h3{color:var(--teal-dark)}
+  .equipment-item p{color:#2a4060}
+}
+
+/* ── PARALLAX BREAK ── */
+.parallax-break{
+  position:relative;
+  height:340px;
+  background-attachment:fixed;
+  background-size:cover;
+  background-position:center;
+  overflow:hidden;
+}
+.parallax-overlay{
+  position:absolute;inset:0;
+  background:rgba(6,15,26,0.55);
+}
+/* Fallback for mobile where fixed attachment is unsupported */
+@media(max-width:860px){
+  .parallax-break{background-attachment:scroll;height:220px}
 }
