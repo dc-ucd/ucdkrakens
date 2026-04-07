@@ -39,6 +39,11 @@
     <section class="page-hero" aria-label="Page header">
       <div class="page-hero-photo" style="background-image:url('images/join-hero.jpg')" aria-hidden="true"></div>
       <div class="page-hero-overlay" aria-hidden="true"></div>
+      <div class="page-hero-wave" aria-hidden="true">
+        <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z" fill="var(--bg-primary)" />
+        </svg>
+      </div>
       <div class="page-hero-content">
         <p class="page-hero-eyebrow">Get Involved</p>
         <h1 class="page-hero-title">Join the Krakens</h1>
@@ -47,19 +52,18 @@
     </section>
     <section class="join-section" aria-labelledby="join-heading">
       <div class="container">
-        <p class="join-intro-text reveal">The UCD Krakens welcome players of all abilities — from total beginners to competitive swimmers. If you can hold your breath and you love a challenge, you'll fit right in.</p>
-
-        <!-- Logo crest centred -->
         <div class="join-crest reveal" aria-hidden="true">
           <img src="images/ucd-krakens-logo.png" alt="" width="200" height="200" />
         </div>
+        <p class="join-intro-text reveal">The UCD Krakens welcome players of all abilities — from total beginners to competitive swimmers. If you can hold your breath and you love a challenge, you'll fit right in.</p>
 
         <h2 id="join-heading" class="section-heading reveal">Why Join Us?</h2>
         <div class="join-cards">
           <article class="join-card reveal reveal-delay-1" tabindex="0"><div class="join-card-icon" aria-hidden="true"><svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="7" cy="7" r="2"/><path d="M10 10l2 2 4-4"/><path d="M2 17c1.5-3 4-4.5 6-4.5s3.5 2 6 2 4.5-1.5 6-4.5"/><path d="M2 21c1.5-3 4-4.5 6-4.5s3.5 2 6 2 4.5-1.5 6-4.5"/></svg></div><h3>Beginners Welcome</h3><p>No experience necessary. We'll teach you everything from breath training to stick technique. All you need is confidence in the water.</p></article>
-          <article class="join-card reveal reveal-delay-2" tabindex="0"><div class="join-card-icon" aria-hidden="true"><svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="8 17 8 21"/><polyline points="16 17 16 21"/><line x1="6" y1="21" x2="18" y2="21"/><path d="M5 3H19M5 3c0 0-1 11 7 11s7-11 7-11"/><path d="M5 8H2S3 15 8 15"/><path d="M19 8H22S21 15 16 15"/></svg></div><h3>Compete Nationally</h3><p>Train hard and represent UCD in the Irish Underwater Hockey League. We take competition seriously while keeping training fun and inclusive.</p></article>
+          <article class="join-card reveal reveal-delay-2" tabindex="0"><div class="join-card-icon" aria-hidden="true"><svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="8 17 8 21"/><polyline points="16 17 16 21"/><line x1="6" y1="21" x2="18" y2="21"/><path d="M5 3H19M5 3c0 0-1 11 7 11s7-11 7-11"/><path d="M5 8H2S3 15 8 15"/><path d="M19 8H22S21 15 16 15"/></svg></div><h3>Compete at All Levels</h3><p>Train hard and represent UCD at national and international competitions. We take the sport seriously while keeping training fun and inclusive.</p></article>
           <article class="join-card reveal reveal-delay-3" tabindex="0"><div class="join-card-icon" aria-hidden="true"><svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg></div><h3>Great Community</h3><p>The Krakens are more than a sports club — we're a tight-knit group of ocean-lovers, athletes, and students who love what we do.</p></article>
         </div>
+
         <h2 class="section-heading reveal">When &amp; Where We Train</h2>
           <div class="info-bar">
             <div class="info-bar-section">
@@ -82,6 +86,7 @@
               </div>
             </div>
           </div>
+
         <h2 class="section-heading reveal" style="margin-top:3rem;">What to Bring</h2>
         <div class="rules-grid" style="margin-bottom:3rem;">
           <article class="rule-card reveal reveal-delay-1" tabindex="0">
@@ -89,14 +94,14 @@
               <img src="images/icons/swimwear.png" alt="" class="equip-icon-img" loading="lazy" />
             </div>
             <h3 class="rule-title">Swimwear</h3>
-            <p>A well-fitting swim suit (and a towel!). A rash guard can also be worn on top for extra protection.</p>
+            <p>A well-fitting swim suit. A rash guard can also be worn on top for extra protection. Oh, and don't forget a towel!</p>
           </article>
           <article class="rule-card reveal reveal-delay-2" tabindex="0">
             <div class="bring-icon" aria-hidden="true">
               <img src="images/icons/mask-and-snorkel.png" alt="" class="equip-icon-img" loading="lazy" />
             </div>
             <h3 class="rule-title">Mask &amp; Snorkel</h3>
-            <p>If you have your own mask and snorkel, bring them. If not, let us know in advance. Players also generally wear a mouth guard or gum shield — <a href='https://www.decathlon.ie' target='_blank' rel='noopener noreferrer'>widely available at sports shops</a>.</p>
+            <p>If you have your own mask and snorkel, bring them along. If not, let us know in advance and we'll do our best to sort you out for your first session.</p>
           </article>
           <article class="rule-card reveal reveal-delay-3" tabindex="0">
             <div class="bring-icon" aria-hidden="true">
@@ -113,12 +118,13 @@
             <p>Seriously, that's the main thing. Underwater hockey has a steep but fun learning curve. Come ready to laugh, work hard, and get wet.</p>
           </article>
         </div>
+
         <div class="cta-box reveal">
           <h2>Ready to Dive In?</h2>
           <p>Send us an email or follow us on Instagram to find out when the next session is. We'd love to hear from you.</p>
           <div class="cta-buttons">
-            <a href="mailto:krakens@ucd.ie" class="btn btn-primary btn-large">Email Us</a>
-            <a href="https://instagram.com" class="btn btn-outline btn-large" rel="noopener noreferrer" target="_blank">Follow on Instagram</a>
+            <a href="mailto:ucd.uwh@gmail.com" class="btn btn-primary btn-large">Email Us</a>
+            <a href="https://www.instagram.com/ucd.uwh/" class="btn btn-outline btn-large" rel="noopener noreferrer" target="_blank">Follow on Instagram</a>
           </div>
         </div>
       </div>
@@ -128,8 +134,8 @@
   <footer class="site-footer" role="contentinfo">
     <div class="footer-inner">
       <div class="footer-social">
-        <a href="https://www.instagram.com/ucd.uwh?igsh=MWp3NHY2eGV0end4NQ==" class="social-link" aria-label="UCD Krakens on Instagram" rel="noopener noreferrer" target="_blank"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
-        <a href="mailto:krakens@ucd.ie" class="social-link" aria-label="Email UCD Krakens"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></a>
+        <a href="https://www.instagram.com/ucd.uwh/" class="social-link" aria-label="UCD Krakens on Instagram" rel="noopener noreferrer" target="_blank"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+        <a href="mailto:ucd.uwh@gmail.com" class="social-link" aria-label="Email UCD Krakens"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></a>
       </div>
       <p class="footer-copy">&copy; 2026 UCD Krakens Underwater Hockey</p>
       <p class="footer-hashtag">#JoinThePod</p>
@@ -137,13 +143,8 @@
   </footer>
 <script>
 (function(){
-  function s(){
-    var scrolled = window.scrollY > 80;
-    document.body.classList.toggle('scrolled', scrolled);
-    document.body.classList.toggle('nav-shrunk', scrolled);
-  }
-  window.addEventListener('scroll',s,{passive:true});
-  s();
+  function s(){document.body.classList.toggle('scrolled',window.scrollY>80);document.body.classList.toggle('nav-shrunk',window.scrollY>80);}
+  window.addEventListener('scroll',s,{passive:true});s();
 })();
 </script>
 <script>

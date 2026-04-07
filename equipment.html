@@ -39,6 +39,11 @@
     <section class="page-hero" aria-label="Page header">
       <div class="page-hero-photo" style="background-image:url('images/equipment-hero.jpg')" aria-hidden="true"></div>
       <div class="page-hero-overlay" aria-hidden="true"></div>
+      <div class="page-hero-wave" aria-hidden="true">
+        <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z" fill="var(--bg-primary)" />
+        </svg>
+      </div>
       <div class="page-hero-content">
         <p class="page-hero-eyebrow">Gear Up</p>
         <h1 class="page-hero-title">Equipment</h1>
@@ -61,7 +66,7 @@
               <img src="images/icons/snorkel.png" alt="" class="equip-icon-img" loading="lazy" />
             </div>
             <h3>Snorkel</h3>
-            <p>A simple J-tube snorkel allows players to breathe at the surface between dives without lifting their head, keeping them ready to dive quickly.</p>
+            <p>A simple J-tube snorkel allows players to breathe at the surface between dives. Players also generally wear a mouth guard or gum shield alongside their snorkel.</p>
           </article>
           <article class="equipment-item reveal reveal-delay-3" tabindex="0">
             <div class="equip-icon" aria-hidden="true">
@@ -86,7 +91,7 @@
           </article>
           <article class="equipment-item reveal reveal-delay-2" tabindex="0">
             <div class="equip-icon" aria-hidden="true">
-              <img src="images/icons/minimalist-water-polo-cap.png" alt="" class="equip-icon-img" loading="lazy" />
+              <img src="images/icons/cap.png" alt="" class="equip-icon-img" loading="lazy" />
             </div>
             <h3>Cap &amp; Ear Guards</h3>
             <p>Numbered water polo caps with built-in ear protectors worn during matches. They identify players and protect the ears during fast underwater play.</p>
@@ -106,9 +111,7 @@
             <p>A 3-metre wide metal trough fixed to each end wall at floor level. A goal is scored when the puck is pushed fully inside the trough.</p>
           </article>
         </div>
-
-        <!-- Equipment-page: single humorous CTA -->
-        <div class="cta-box reveal" style="margin-top:3rem;text-align:center;">
+        <div class="cta-box reveal" style="text-align:center;">
           <h2>What Are You Waiting For?</h2>
           <p>You've got the rules, you've seen the gear. The pool is ready. The only thing missing is you.</p>
           <div class="cta-buttons" style="justify-content:center;">
@@ -122,8 +125,8 @@
   <footer class="site-footer" role="contentinfo">
     <div class="footer-inner">
       <div class="footer-social">
-        <a href="https://instagram.com" class="social-link" aria-label="UCD Krakens on Instagram" rel="noopener noreferrer" target="_blank"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
-        <a href="mailto:krakens@ucd.ie" class="social-link" aria-label="Email UCD Krakens"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></a>
+        <a href="https://www.instagram.com/ucd.uwh/" class="social-link" aria-label="UCD Krakens on Instagram" rel="noopener noreferrer" target="_blank"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+        <a href="mailto:ucd.uwh@gmail.com" class="social-link" aria-label="Email UCD Krakens"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></a>
       </div>
       <p class="footer-copy">&copy; 2026 UCD Krakens Underwater Hockey</p>
       <p class="footer-hashtag">#JoinThePod</p>
@@ -131,13 +134,8 @@
   </footer>
 <script>
 (function(){
-  function s(){
-    var scrolled = window.scrollY > 80;
-    document.body.classList.toggle('scrolled', scrolled);
-    document.body.classList.toggle('nav-shrunk', scrolled);
-  }
-  window.addEventListener('scroll',s,{passive:true});
-  s();
+  function s(){document.body.classList.toggle('scrolled',window.scrollY>80);document.body.classList.toggle('nav-shrunk',window.scrollY>80);}
+  window.addEventListener('scroll',s,{passive:true});s();
 })();
 </script>
 <script>
