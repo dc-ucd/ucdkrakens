@@ -40,10 +40,17 @@ a:focus-visible,[tabindex="0"]:focus-visible{outline:2px solid var(--teal);outli
 .site-header{position:fixed;top:0;left:0;right:0;z-index:100;background:var(--nav-bg);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid rgba(26,200,200,0.15)}
 .header-inner{display:flex;align-items:center;justify-content:space-between;max-width:1160px;margin:0 auto;padding:0.25rem 24px;gap:1rem}
 .logo{display:flex;align-items:center;text-decoration:none}
-.logo-img{height:120px;width:auto;transition:transform var(--transition);filter:drop-shadow(0 0 14px rgba(26,200,200,0.5))}
-.hero-crest{position:absolute;right:min(8vw,120px);top:50%;transform:translateY(-50%);z-index:4;pointer-events:none;animation:heroFadeIn 1.4s ease both}
-.hero-crest img{width:clamp(160px,22vw,280px);height:auto;filter:drop-shadow(0 8px 32px rgba(0,0,0,0.6)) drop-shadow(0 0 24px rgba(26,200,200,0.25))}
-@media(max-width:860px){.hero-crest{display:none}}
+.logo-img{
+  height:140px;
+  width:auto;
+  transition:height 0.4s cubic-bezier(0.16,1,0.3,1), transform var(--transition), filter var(--transition);
+  filter:drop-shadow(0 0 14px rgba(26,200,200,0.5));
+  transform-origin:top left;
+}
+.nav-shrunk .logo-img{height:72px;}
+.header-inner{transition:padding 0.4s cubic-bezier(0.16,1,0.3,1);}
+.nav-shrunk .header-inner{padding-top:0.2rem;padding-bottom:0.2rem;}
+
 .logo:hover .logo-img{transform:scale(1.06) rotate(-3deg)}
 .main-nav ul{display:flex;list-style:none;gap:0.15rem}
 .nav-link{display:block;padding:0.4rem 0.65rem;font-size:0.78rem;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:var(--text-secondary);border-radius:6px;position:relative;transition:color var(--transition)}
@@ -128,8 +135,8 @@ body.scrolled .back-to-top{opacity:1;pointer-events:auto;transform:translateY(0)
 /* Page hero (inner pages) */
 .page-hero{position:relative;overflow:hidden;text-align:center;padding:160px 24px 70px}
 .page-hero-photo{position:absolute;inset:0;background-size:cover;background-position:center;animation:heroZoom 20s ease-in-out infinite alternate}
-.page-hero-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(6,15,26,0.75) 0%,rgba(6,15,26,0.60) 50%,var(--bg-primary) 100%)}
-.page-hero-content{position:relative;z-index:2;animation:heroFadeIn 1s ease both}
+.page-hero-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(6,15,26,0.45) 0%,rgba(6,15,26,0.35) 50%,var(--bg-primary) 100%)}
+.page-hero-content{position:relative;z-index:2;animation:heroFadeIn 1s ease both;padding:140px 24px 80px;width:100%}
 .page-hero-eyebrow{font-family:'Barlow Condensed',sans-serif;font-size:0.85rem;font-weight:700;letter-spacing:0.25em;text-transform:uppercase;color:var(--teal);margin-bottom:0.5rem}
 .page-hero-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(2.8rem,8vw,6rem);letter-spacing:0.05em;color:#fff;line-height:1;text-shadow:0 0 40px rgba(26,200,200,0.25);margin-bottom:1rem}
 .page-hero-desc{max-width:580px;margin:0 auto;color:var(--text-secondary);font-size:1rem;line-height:1.75}
@@ -331,19 +338,88 @@ body.scrolled .back-to-top{opacity:1;pointer-events:auto;transform:translateY(0)
 }
 
 /* ── PARALLAX BREAK ── */
+.parallax-wrap{
+  position:relative;
+  margin:0;
+  z-index:1;
+}
+.parallax-wave-top,
+.parallax-wave-bottom{
+  position:relative;
+  z-index:2;
+  line-height:0;
+  margin:0;
+}
+.parallax-wave-top svg,
+.parallax-wave-bottom svg{
+  width:100%;
+  height:60px;
+  display:block;
+}
+.parallax-wave-top{margin-bottom:-2px;}
+.parallax-wave-bottom{margin-top:-2px;}
 .parallax-break{
   position:relative;
-  height:340px;
+  height:400px;
   background-attachment:fixed;
   background-size:cover;
   background-position:center;
   overflow:hidden;
+  animation:heroZoom 20s ease-in-out infinite alternate;
 }
 .parallax-overlay{
   position:absolute;inset:0;
-  background:rgba(6,15,26,0.55);
+  background:rgba(6,15,26,0.40);
 }
-/* Fallback for mobile where fixed attachment is unsupported */
 @media(max-width:860px){
-  .parallax-break{background-attachment:scroll;height:220px}
+  .parallax-break{
+    background-attachment:scroll;
+    height:260px;
+    animation:none;
+  }
+}
+
+/* Join page intro + crest */
+.join-intro-text{
+  text-align:center;
+  color:var(--text-secondary);
+  max-width:600px;
+  margin:0 auto 2rem;
+  font-size:1rem;
+  line-height:1.75;
+}
+.join-crest{
+  display:flex;
+  justify-content:center;
+  margin:0 auto 3rem;
+}
+.join-crest img{
+  width:200px;height:200px;
+  object-fit:contain;
+  filter:drop-shadow(0 8px 24px rgba(0,0,0,0.4)) drop-shadow(0 0 16px rgba(26,200,200,0.2));
+}
+
+/* CMAS download box variant */
+.cta-box--download{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+.download-icon{
+  color:var(--teal);
+  margin-bottom:1rem;
+}
+.download-icon .icon-svg{width:40px;height:40px;}
+.btn .icon-svg{width:18px;height:18px;display:inline;vertical-align:middle;margin-right:0.4rem;}
+
+/* Referees card-icon used inline */
+.info-card .card-icon{margin-bottom:1rem;}
+
+/* Mobile icon centering for equipment + bring */
+@media(max-width:600px){
+  .equipment-item{text-align:center;}
+  .equip-icon{margin:0 auto 1rem;}
+  .bring-icon{margin:0 auto 0.75rem;}
+  .rule-card{text-align:center;}
+  .rule-card .bring-icon{margin:0 auto 0.75rem;}
 }

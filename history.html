@@ -16,7 +16,7 @@
   <header class="site-header" role="banner">
     <div class="header-inner">
       <a href="index.html" class="logo" aria-label="UCD Krakens Underwater Hockey — Home">
-        <img src="images/ucd-krakens-logo.png" alt="UCD Krakens Underwater Hockey" class="logo-img" width="120" height="120" />
+        <img src="images/ucd-krakens-logo.png" alt="UCD Krakens Underwater Hockey" class="logo-img" width="140" height="140" />
       </a>
       <input type="checkbox" id="nav-toggle" class="nav-toggle-checkbox" aria-hidden="true" />
       <label for="nav-toggle" class="nav-toggle-label" aria-label="Toggle navigation">
@@ -26,7 +26,7 @@
         <ul role="list">
           <li><a href="what-is-uwh.html" class="nav-link">What is UWH?</a></li>
           <li><a href="history.html" class="nav-link active">History</a></li>
-          <li><a href="rules.html" class="nav-link">Rules &amp; How to Play</a></li>
+          <li><a href="how-to-play.html" class="nav-link">How to Play</a></li>
           <li><a href="equipment.html" class="nav-link">Equipment</a></li>
           <li><a href="join.html" class="nav-link">Join the Krakens</a></li>
           
@@ -58,11 +58,11 @@
           <div class="timeline-item reveal reveal-delay-2" tabindex="0"><div class="timeline-year">2000s</div><div class="timeline-content"><h3>Growth in Ireland</h3><p>Underwater hockey established itself in Ireland, with clubs forming in Dublin and other cities and the Irish Underwater Hockey League providing a competitive domestic structure.</p></div></div>
           <div class="timeline-item reveal reveal-delay-1" tabindex="0"><div class="timeline-year">Today</div><div class="timeline-content"><h3>UCD Krakens</h3><p>The Krakens compete in the Irish national league and welcome new players of all backgrounds. World Championships are held every two years, drawing teams from over 40 nations.</p></div></div>
         </div>
-        <div class="cta-box reveal">
-          <h2>Be Part of the Story</h2>
-          <p>The Krakens are writing their own chapter. Come join us at training.</p>
+        <div class="cta-box reveal" style="margin-top:3rem;">
+          <h2>Ready to Learn the Rules?</h2>
+          <p>Now you know where it all started — find out how the game is played.</p>
           <div class="cta-buttons">
-            <a href="rules.html" class="btn btn-primary btn-large">Rules &amp; How to Play</a>
+            <a href="how-to-play.html" class="btn btn-primary btn-large">How to Play</a>
             <a href="join.html" class="btn btn-outline btn-large">Join the Krakens</a>
           </div>
         </div>
@@ -82,8 +82,13 @@
   </footer>
 <script>
 (function(){
-  function s(){document.body.classList.toggle('scrolled',window.scrollY>300)}
-  window.addEventListener('scroll',s,{passive:true});s();
+  function s(){
+    var scrolled = window.scrollY > 80;
+    document.body.classList.toggle('scrolled', scrolled);
+    document.body.classList.toggle('nav-shrunk', scrolled);
+  }
+  window.addEventListener('scroll',s,{passive:true});
+  s();
 })();
 </script>
 <script>

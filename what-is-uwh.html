@@ -16,7 +16,7 @@
   <header class="site-header" role="banner">
     <div class="header-inner">
       <a href="index.html" class="logo" aria-label="UCD Krakens Underwater Hockey — Home">
-        <img src="images/ucd-krakens-logo.png" alt="UCD Krakens Underwater Hockey" class="logo-img" width="120" height="120" />
+        <img src="images/ucd-krakens-logo.png" alt="UCD Krakens Underwater Hockey" class="logo-img" width="140" height="140" />
       </a>
       <input type="checkbox" id="nav-toggle" class="nav-toggle-checkbox" aria-hidden="true" />
       <label for="nav-toggle" class="nav-toggle-label" aria-label="Toggle navigation">
@@ -26,7 +26,7 @@
         <ul role="list">
           <li><a href="what-is-uwh.html" class="nav-link active">What is UWH?</a></li>
           <li><a href="history.html" class="nav-link">History</a></li>
-          <li><a href="rules.html" class="nav-link">Rules &amp; How to Play</a></li>
+          <li><a href="how-to-play.html" class="nav-link">How to Play</a></li>
           <li><a href="equipment.html" class="nav-link">Equipment</a></li>
           <li><a href="join.html" class="nav-link">Join the Krakens</a></li>
           
@@ -67,20 +67,6 @@
           <div class="uwh-fact reveal reveal-delay-2" tabindex="0"><div class="uwh-fact-num">2m+</div><div class="uwh-fact-label">Typical pool depth for competitive play</div></div>
           <div class="uwh-fact reveal reveal-delay-3" tabindex="0"><div class="uwh-fact-num">1954</div><div class="uwh-fact-label">Year the sport was invented in England</div></div>
         </div>
-      </div>
-    </section>
-    <div class="parallax-break" role="img" aria-label="Underwater hockey action shot" style="background-image:url('images/parallax-2.jpg')">
-      <div class="parallax-overlay" aria-hidden="true"></div>
-    </div>
-    <section class="uwh-section" style="padding-top:4rem;" aria-label="How a game works">
-      <div class="container">
-        <h2 class="section-heading reveal">How a Game Works</h2>
-        <div class="rules-grid">
-          <article class="rule-card reveal reveal-delay-1" tabindex="0"><span class="rule-number" aria-hidden="true">01</span><h3 class="rule-title">Start of Play</h3><p>Both teams line up on opposite walls. On the signal, all players dive and race to the puck resting at the centre of the pool floor.</p></article>
-          <article class="rule-card reveal reveal-delay-2" tabindex="0"><span class="rule-number" aria-hidden="true">02</span><h3 class="rule-title">In the Water</h3><p>Players pass, tackle, and shoot at the pool floor with their sticks. All play happens at the bottom — no standing allowed.</p></article>
-          <article class="rule-card reveal reveal-delay-3" tabindex="0"><span class="rule-number" aria-hidden="true">03</span><h3 class="rule-title">Surfacing</h3><p>Players surface freely to breathe and can be substituted on the fly while play continues, just like ice hockey.</p></article>
-          <article class="rule-card reveal reveal-delay-4" tabindex="0"><span class="rule-number" aria-hidden="true">04</span><h3 class="rule-title">Scoring</h3><p>A goal is scored when the puck is pushed fully into the metal trough goal along the opponent's wall. Most goals wins.</p></article>
-        </div>
         <div class="cta-box reveal" style="margin-top:3rem;">
           <h2>Want to Give it a Go?</h2>
           <p>Come along to one of our training sessions at UCD Sports Centre Pool. No experience needed.</p>
@@ -105,8 +91,13 @@
   </footer>
 <script>
 (function(){
-  function s(){document.body.classList.toggle('scrolled',window.scrollY>300)}
-  window.addEventListener('scroll',s,{passive:true});s();
+  function s(){
+    var scrolled = window.scrollY > 80;
+    document.body.classList.toggle('scrolled', scrolled);
+    document.body.classList.toggle('nav-shrunk', scrolled);
+  }
+  window.addEventListener('scroll',s,{passive:true});
+  s();
 })();
 </script>
 <script>

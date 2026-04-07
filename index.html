@@ -16,7 +16,7 @@
   <header class="site-header" role="banner">
     <div class="header-inner">
       <a href="index.html" class="logo" aria-label="UCD Krakens Underwater Hockey — Home">
-        <img src="images/ucd-krakens-logo.png" alt="UCD Krakens Underwater Hockey" class="logo-img" width="120" height="120" />
+        <img src="images/ucd-krakens-logo.png" alt="UCD Krakens Underwater Hockey" class="logo-img" width="140" height="140" />
       </a>
       <input type="checkbox" id="nav-toggle" class="nav-toggle-checkbox" aria-hidden="true" />
       <label for="nav-toggle" class="nav-toggle-label" aria-label="Toggle navigation">
@@ -26,7 +26,7 @@
         <ul role="list">
           <li><a href="what-is-uwh.html" class="nav-link">What is UWH?</a></li>
           <li><a href="history.html" class="nav-link">History</a></li>
-          <li><a href="rules.html" class="nav-link">Rules &amp; How to Play</a></li>
+          <li><a href="how-to-play.html" class="nav-link">How to Play</a></li>
           <li><a href="equipment.html" class="nav-link">Equipment</a></li>
           <li><a href="join.html" class="nav-link">Join the Krakens</a></li>
           
@@ -56,9 +56,6 @@
           <a href="what-is-uwh.html" class="btn btn-primary">Discover the Sport</a>
           <a href="join.html" class="btn btn-outline">Join the Pod</a>
         </div>
-      </div>
-      <div class="hero-crest" aria-hidden="true">
-        <img src="images/ucd-krakens-logo.png" alt="" width="260" height="260" />
       </div>
       <div class="wave-divider" aria-hidden="true">
         <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
@@ -94,15 +91,27 @@
       </div>
     </section>
 
-    <div class="parallax-break" role="img" aria-label="Underwater hockey players in action at the pool floor" style="background-image:url('images/parallax-1.jpg')">
-      <div class="parallax-overlay" aria-hidden="true"></div>
+    <div class="parallax-wrap" role="img" aria-label="Underwater hockey players in action at the pool floor">
+      <div class="parallax-wave-top" aria-hidden="true">
+        <svg viewBox="0 0 1440 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0,0 C360,60 1080,0 1440,0 L1440,60 L0,60 Z" fill="var(--bg-primary)" />
+        </svg>
+      </div>
+      <div class="parallax-break" style="background-image:url('images/parallax-1.jpg')">
+        <div class="parallax-overlay" aria-hidden="true"></div>
+      </div>
+      <div class="parallax-wave-bottom" aria-hidden="true">
+        <svg viewBox="0 0 1440 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0,60 C360,0 1080,60 1440,60 L1440,0 L0,0 Z" fill="var(--bg-primary)" />
+        </svg>
+      </div>
     </div>
 
     <section class="why-play-section" aria-labelledby="why-play-heading">
       <div class="container">
         <div class="why-play-grid">
           <div class="why-play-image reveal">
-            <img src="images/why-play.jpg" alt="Players competing for the puck at the bottom of the pool" loading="lazy" />
+            <img src="images/why-play.jpg" alt="Players competing for the puck at the pool floor" loading="lazy" />
           </div>
           <div class="why-play-text reveal reveal-delay-2">
             <p class="eyebrow">The Sport</p>
@@ -168,8 +177,13 @@
   </footer>
 <script>
 (function(){
-  function s(){document.body.classList.toggle('scrolled',window.scrollY>300)}
-  window.addEventListener('scroll',s,{passive:true});s();
+  function s(){
+    var scrolled = window.scrollY > 80;
+    document.body.classList.toggle('scrolled', scrolled);
+    document.body.classList.toggle('nav-shrunk', scrolled);
+  }
+  window.addEventListener('scroll',s,{passive:true});
+  s();
 })();
 </script>
 <script>

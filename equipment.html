@@ -16,7 +16,7 @@
   <header class="site-header" role="banner">
     <div class="header-inner">
       <a href="index.html" class="logo" aria-label="UCD Krakens Underwater Hockey — Home">
-        <img src="images/ucd-krakens-logo.png" alt="UCD Krakens Underwater Hockey" class="logo-img" width="120" height="120" />
+        <img src="images/ucd-krakens-logo.png" alt="UCD Krakens Underwater Hockey" class="logo-img" width="140" height="140" />
       </a>
       <input type="checkbox" id="nav-toggle" class="nav-toggle-checkbox" aria-hidden="true" />
       <label for="nav-toggle" class="nav-toggle-label" aria-label="Toggle navigation">
@@ -26,7 +26,7 @@
         <ul role="list">
           <li><a href="what-is-uwh.html" class="nav-link">What is UWH?</a></li>
           <li><a href="history.html" class="nav-link">History</a></li>
-          <li><a href="rules.html" class="nav-link">Rules &amp; How to Play</a></li>
+          <li><a href="how-to-play.html" class="nav-link">How to Play</a></li>
           <li><a href="equipment.html" class="nav-link active">Equipment</a></li>
           <li><a href="join.html" class="nav-link">Join the Krakens</a></li>
           
@@ -106,12 +106,13 @@
             <p>A 3-metre wide metal trough fixed to each end wall at floor level. A goal is scored when the puck is pushed fully inside the trough.</p>
           </article>
         </div>
-        <div class="cta-box reveal">
-          <h2>Don't Have Equipment Yet?</h2>
-          <p>When you're starting out the club can lend you a stick and glove. You'll just need your own mask, snorkel, and fins.</p>
-          <div class="cta-buttons">
+
+        <!-- Equipment-page: single humorous CTA -->
+        <div class="cta-box reveal" style="margin-top:3rem;text-align:center;">
+          <h2>What Are You Waiting For?</h2>
+          <p>You've got the rules, you've seen the gear. The pool is ready. The only thing missing is you.</p>
+          <div class="cta-buttons" style="justify-content:center;">
             <a href="join.html" class="btn btn-primary btn-large">Join the Krakens</a>
-            <a href="rules.html" class="btn btn-outline btn-large">Read the Rules</a>
           </div>
         </div>
       </div>
@@ -130,8 +131,13 @@
   </footer>
 <script>
 (function(){
-  function s(){document.body.classList.toggle('scrolled',window.scrollY>300)}
-  window.addEventListener('scroll',s,{passive:true});s();
+  function s(){
+    var scrolled = window.scrollY > 80;
+    document.body.classList.toggle('scrolled', scrolled);
+    document.body.classList.toggle('nav-shrunk', scrolled);
+  }
+  window.addEventListener('scroll',s,{passive:true});
+  s();
 })();
 </script>
 <script>
